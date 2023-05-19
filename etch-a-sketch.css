@@ -2,9 +2,11 @@ body {
     background-color: lightgray;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-div{
+#pixel{
     width: 10px;
     height: 10px;
     background-color: green;
@@ -16,4 +18,12 @@ div{
     background-color: white;
     display: flex;
     flex-wrap: wrap;
+}
+
+#title{
+    font-size: 36px;
+    color: black;
+    font-weight:bold ;
+    margin-top: 100px;
+    margin-bottom: 40px;
 }
