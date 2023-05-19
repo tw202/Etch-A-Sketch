@@ -14,7 +14,7 @@ for (let i = 0; i < amountPixelTotal; i++){
 
 const pixels = document.querySelectorAll('#pixel')
 pixels.forEach((pixel) => {
-    pixel.addEventListener('mousemove', (e) => {
-        e.target.style.backgroundColor = 'white';
+    pixel.addEventListener('mouseover', (e) => {
+        e.target.style.backgroundColor = 'black';
     })
 })

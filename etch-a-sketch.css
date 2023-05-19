@@ -9,7 +9,7 @@ body {
 #pixel{
     width: 10px;
     height: 10px;
-    background-color: green;
+    background-color: white;
 }
 
 #container{
@@ -26,4 +26,11 @@ body {
     font-weight:bold ;
     margin-top: 100px;
     margin-bottom: 40px;
+}
+
+button{
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
 }
