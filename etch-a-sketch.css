@@ -1,0 +1,19 @@
+body {
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+}
+
+div{
+    width: 10px;
+    height: 10px;
+    background-color: green;
+}
+
+#container{
+    width: 450px;
+    height: 450px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
