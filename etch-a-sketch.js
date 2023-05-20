@@ -13,8 +13,19 @@ for (let i = 0; i < amountPixelTotal; i++){
 }
 
 const pixels = document.querySelectorAll('#pixel')
+let isDrawing = false;
+
+container.addEventListener('mousedown', () => {
+    isDrawing = true;
+})
+container.addEventListener('mouseup', () => {
+    isDrawing = false;
+})
+
 pixels.forEach((pixel) => {
     pixel.addEventListener('mouseover', (e) => {
-        e.target.style.backgroundColor = 'black';
+        if (isDrawing){
+            e.target.style.backgroundColor = 'black';
+        }       
     })
 })
