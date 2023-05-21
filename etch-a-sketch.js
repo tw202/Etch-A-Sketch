@@ -13,6 +13,11 @@ function createCanvas(squaresPerSideInput) {
     let square;
     let canvasLength = 450;//px
     let squaresPerSide = squaresPerSideInput;
+    if (squaresPerSide > 100){
+        alert("Value > 100 not allowed! Fallback to default value 16");
+        squaresPerSide = 16;
+    }
+
     let amountSquaresTotal = squaresPerSide * squaresPerSide;
     for (let i = 0; i < amountSquaresTotal; i++){
         square = document.createElement('div');
@@ -58,4 +63,6 @@ choseSizeButton.addEventListener('click', () => {
     //reset canvas - remove squares
     resetCanvas(squares);
     createCanvas(squaresPerSide);
+    squares = getSquares();
+    addEventListenerToSquares(squares);
 })
