@@ -1,18 +1,18 @@
 const container = document.querySelector('#container');
-let pixel;
+let square;
 let canvasLength = 450;//px
-let pixelPerLenght = 16;
-let amountPixelTotal = pixelPerLenght * pixelPerLenght;
-for (let i = 0; i < amountPixelTotal; i++){
-    pixel = document.createElement('div');
-    let width = canvasLength/pixelPerLenght 
-    pixel.style.width = `${width}px`;
-    pixel.style.height = `${width}px`; //rectangle
-    pixel.id = 'pixel';
-    container.appendChild(pixel);
+let squaresPerSide = 16;
+let amountSquaresTotal = squaresPerSide * squaresPerSide;
+for (let i = 0; i < amountSquaresTotal; i++){
+    square = document.createElement('div');
+    let width = canvasLength/squaresPerSide 
+    square.style.width = `${width}px`;
+    square.style.height = `${width}px`; //rectangle
+    square.id = 'square';
+    container.appendChild(square);
 }
 
-const pixels = document.querySelectorAll('#pixel')
+const squares = document.querySelectorAll('#square')
 let isDrawing = false;
 
 container.addEventListener('mousedown', () => {
@@ -22,10 +22,15 @@ container.addEventListener('mouseup', () => {
     isDrawing = false;
 })
 
-pixels.forEach((pixel) => {
+squares.forEach((pixel) => {
     pixel.addEventListener('mouseover', (e) => {
         if (isDrawing){
             e.target.style.backgroundColor = 'black';
         }       
     })
+})
+
+const choseSizeButton = document.querySelector('button');
+choseSizeButton.addEventListener('click', () => {
+    squaresPerSide = prompt('Choose number of squares per side!');
 })
