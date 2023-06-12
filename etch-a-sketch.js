@@ -18,6 +18,14 @@ function createCanvas(squaresPerSideInput) {
         squaresPerSide = 16;
     }
 
+    let squaresPerSideInt;
+    squaresPerSideInt = parseInt(squaresPerSide);
+
+    if(isNaN(squaresPerSideInt)){
+        alert('Please enter a number');
+        squaresPerSide = 16;//Fallback to default
+    };
+
     let amountSquaresTotal = squaresPerSide * squaresPerSide;
     for (let i = 0; i < amountSquaresTotal; i++){
         square = document.createElement('div');
